@@ -1,12 +1,17 @@
 nginx:
   build: images/nginx
+  ports:
+    - "80:80"
+  volumes:
+    - /Users/ouarea/dev/workspace_for_web:/var/www
   command: nginx -g "daemon off;"
   links:
     - php
-  ports:
-    - "80:80"
+
 php:
   build: images/php
+  ports:
+    - "9000:9000"
   volumes:
     - /Users/ouarea/dev/workspace_for_web:/var/www
   working_dir: /var/www
@@ -14,8 +19,6 @@ php:
 #  links:
 #    - db
 #    - cache
-  ports:
-    - "9000:9000"
 #  environment:
 #    APP_ENV: local
 #    APP_DEBUG: 'true'
