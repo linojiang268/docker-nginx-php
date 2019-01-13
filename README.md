@@ -1,6 +1,4 @@
-# Docker + laravel with Nginx and Php
-
-![image](Laravel_splash.png)
+# Docker + project with Nginx and Php and Postgresql
 
 ### Configuration
 
@@ -21,7 +19,6 @@ docker-compose up --build -d
 ```
 
 Navigate to [http://localhost:80](http://localhost:80) and you should see something like this
-![image](Laravel_browser.png)
 
 Success! You can now start developing your Lumen app on your host machine and you should see your changes on refresh! Classic PHP development cycle. A good place to start is `images/php/app/routes/web.php`.
 
